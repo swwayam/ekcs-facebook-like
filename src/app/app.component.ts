@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'facebook-like';
+
+  log(): Boolean{
+    console.log(this.title);
+
+    return false;
+  }
+
+  addPost(email : HTMLInputElement, link : HTMLInputElement){
+      console.log(email.value);
+      console.log(link.value);
+      
+      return false;
+  }
 }
