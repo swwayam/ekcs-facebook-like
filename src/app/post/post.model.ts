@@ -10,4 +10,12 @@ export class Post{
     this.likeCount = like || 0;
     this.dislikeCount = dislike || 0;
   }
+
+  dislike() : void{
+    this.dislikeCount++;
+  }
+
+  like(): void{
+    this.likeCount++;
+  }
 }
