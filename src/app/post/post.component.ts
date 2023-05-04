@@ -12,7 +12,7 @@ export class PostComponent {
  
  constructor(){
   // This is how we create a new post
-  this.newPost = new Post("Google", "www.google.com");
+  this.newPost = new Post("Google", "www.google.com", 10, 1);
  }
 
  like(): Boolean{
