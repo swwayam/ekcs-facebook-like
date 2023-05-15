@@ -11,4 +11,8 @@
  
 </form>
 
-<app-post></app-post>
+<!--We have an array named Posts which stores all the post-->
+<!--Now we will pass one post at a time to the post component ( using loop )-->
+<!--Post component will take the input one by one and display the ui on the screen -->
+
+<app-post *ngFor="let p of posts" [newPost]="p"></app-post>

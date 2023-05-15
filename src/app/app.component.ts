@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Post } from './post/post.model';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'facebook-like';
+  posts : Post[] = [];
 
 
-  addPost(email : HTMLInputElement, link : HTMLInputElement){
-      console.log(email.value);
-      console.log(link.value);
-      
+  addPost(email : HTMLInputElement, link : HTMLInputElement): boolean{
+      this.posts.push(new Post(email.value, link.value))
+     
       return false;
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Post } from './post.model';
 
 @Component({
@@ -7,12 +7,12 @@ import { Post } from './post.model';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent {
- newPost : Post;
+@Input() newPost !: Post;
  
  
  constructor(){
   // This is how we create a new post
-  this.newPost = new Post("Google", "www.google.com", 10, 1);
+  // this.newPost = new Post("Google", "www.google.com", 10, 1);
  }
 
  like(): Boolean{
