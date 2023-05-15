@@ -13,7 +13,8 @@ export class AppComponent {
 
   addPost(email : HTMLInputElement, link : HTMLInputElement): boolean{
       this.posts.push(new Post(email.value, link.value))
-     
+      email.value = ""
+      link.value = ""
       return false;
   }
 }
