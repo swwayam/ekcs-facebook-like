@@ -1,3 +1,5 @@
+// Creating a template here so that our component dosn't have the core logic
+
 export class Post{
   title: String;
   link: String;

@@ -7,12 +7,17 @@ import { Post } from './post.model';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent {
+
+// App component is passing us post one by one
+// We are taking the input and storing it in newPost
+// Once the value is stored it's passed to html
+// in html we say newPost.title and newPost.link this will display the UI with the post values
+
 @Input() newPost !: Post;
  
  
  constructor(){
-  // This is how we create a new post
-  // this.newPost = new Post("Google", "www.google.com", 10, 1);
+  
  }
 
  like(): Boolean{

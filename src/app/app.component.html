@@ -1,6 +1,9 @@
+<!-- The Form tag creates the form to accept user input -->
+
 <form>
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
+    <!--The #email is called template reference variable-->
     <input type="text" class="form-control" id="title" #email>
   </div>
   <div class="mb-3">
@@ -11,8 +14,9 @@
  
 </form>
 
-<!--We have an array named Posts which stores all the post-->
+<!--We have an array named Posts which stores all the post that user created-->
 <!--Now we will pass one post at a time to the post component ( using loop )-->
-<!--Post component will take the input one by one and display the ui on the screen -->
+<!--This loop will use the post component multiple times with difrent post values -->
+<!--Post component will return the ui with the passed in value -->
 
 <app-post *ngFor="let p of posts" [newPost]="p"></app-post>
